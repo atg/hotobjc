@@ -59,7 +59,7 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
         if (!hot_classIsOfKind(classes[i], [NSObject class]))
             continue;
         
-        [classNames addObject:classes[i]];
+        [classNames addObject:NSStringFromClass(classes[i])];
     }
     
     free(classes);
