@@ -65,37 +65,54 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
     free(classes);
     return classNames;
 }
-+ (NSSet*)allMethodsForClass:(Class)cl {
-    
++ (void)enumerateMethodsForClass:(Class)cl with:(void(^)(Method meth))f {
     unsigned n = 0;
     Method* methods = class_copyMethodList(classes, &n);
     
-    NSMutableSet* methodNames = [NSMutableSet set];
     for (unsigned i = 0; i < n; i++) {
-        SEL sel = method_getName(methods[i]);
+        f(methods[i]);
+    }
+    
+    free(methods);
+}
+
++ (NSSet*)allMethodsForClass:(Class)cl {
+    
+    NSMutableSet* methodNames = [NSMutableSet set];
+    
+    [self enumerateMethodsForClass:cl with:^(Method meth) {
+        SEL sel = method_getName(meth);
         if (!sel)
             continue;
         
         [methodNames addObject:NSStringFromSelector(sel)];
-    }
+    }];
     
-    free(methods);
     return methodNames;        
 }
 
+- (NSString*)targetPath {
+    // TODO: get the path to the real app
+}
 - (void)start {
     [NSThread detachNewThreadSelector:@selector(startBackground) toTarget:self withObject:nil];
 }
 - (void)startBackground {
     
-    
-    
+    NSTimeInterval lastChangeDate = [NSDate timeIntervalSinceReferenceDate];
+    while (1) {
+        
+        NSTimeInterval newChangeDate = ...;
+        
+        
+        sleep(1);
+    }
 }
 - (void)reload:(BOOL)isInitial {
     
     void *existingHandle = handle;
     
-    handle = dlopen([[self targetPath] UTF8String], RTLD_LOCAL);
+    handle = dlopen([[self targetPath] UTF8String], isInitial ? RTLD_GLOBAL : RTLD_LOCAL);
     if (!isInitial)
         [self swizzle];
     
@@ -108,9 +125,16 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
     
     for (NSString* classname in [[self class] allClasses]) {
         Class cl = NSClassFromString(classname);
-        for (NSString* methodname in [[self class] allMethodsForClass:cl]) {
+        [self enumerateMethodsForClass:cl with:^(Method meth) {
+            SEL sel = method_getName(meth);
+            if (!sel)
+                continue;
             
-        }
+            NSString* methodname = NSStringFromSelector(sel);
+            
+            IMP imp = (IMP)[self symbolNamed:[NSString stringWithFormat:@"_%@__%@", classname, methodname] errorString:NULL];
+            method_setImplementation(meth, imp);
+        }];
     }
 }
 - (void*)symbolNamed:(NSString*)name errorString:(NSString**)errstr {
@@ -142,7 +166,7 @@ int main(int argc, char** argv, char** envp, char** apple) {
     [loader start];
     
     // Get the main function from the loaded dylib and run it
-    hot_main_t existing_main = (hot_main_t)[loader symbolNamed:@"main" error:NULL];
+    hot_main_t existing_main = (hot_main_t)[loader symbolNamed:@"_main" error:NULL];
     int status = existing_main(argc, argv, envp, apple);
     
     [pool drain];
