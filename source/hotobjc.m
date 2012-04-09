@@ -46,15 +46,15 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
 }
 
 + (NSSet*)allClasses {
-    const size_t n = objc_getClassList(NULL, 0);
+    int n = objc_getClassList(NULL, 0);
     Class* classes = calloc(sizeof(Class), n);
     if (!classes)
         hot_raise(@"Not enough space to allocate class list.");
     
-    size_t m = objc_getClassList(classes, n);
+    int m = objc_getClassList(classes, n);
     
     NSMutableSet* classNames = [NSMutableSet set];
-    for (unsigned i = 0; i < m; i++) {
+    for (int i = 0; i < m; i++) {
         
         if (!hot_classIsOfKind(classes[i], [NSObject class]))
             continue;
@@ -68,7 +68,7 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
 + (NSSet*)allMethodsForClass:(Class)cl {
     
     unsigned n = 0;
-    Method* methods = objc_getClassList(classes, n);
+    Method* methods = class_copyMethodList(classes, &n);
     
     NSMutableSet* methodNames = [NSMutableSet set];
     for (unsigned i = 0; i < n; i++) {
