@@ -20,6 +20,7 @@ typedef (int)(*hot_main_t)(int, char**, char**, char**);
 @property (retain) NSSet* baseClasses;
 
 + (NSSet*)allClasses;
++ (NSSet*)allMethodsForClass:(Class)cl;
 
 - (void)start;
 - (void)startBackground;
@@ -34,22 +35,52 @@ typedef (int)(*hot_main_t)(int, char**, char**, char**);
 @synthesize handle;
 @synthesize baseClasses;
 
+static BOOL hot_classIsOfKind(Class cl, Class other) {
+    Class superclass = cl;
+    while (superclass) {
+        if (superclass == other)
+            return YES;
+        superclass = class_getSuperclass(superclass);
+    }
+    return NO;
+}
+
 + (NSSet*)allClasses {
-    const size_t n = 75000;
+    const size_t n = objc_getClassList(NULL, 0);
     Class* classes = calloc(sizeof(Class), n);
     if (!classes)
         hot_raise(@"Not enough space to allocate class list.");
     
-    @try {
-        const size_t m = objc_getClassList(classes, n);
-        if (n > m)
-            hot_raise(@"The user has too many classes and should perhaps be shot.");
+    size_t m = objc_getClassList(classes, n);
+    
+    NSMutableSet* classNames = [NSMutableSet set];
+    for (unsigned i = 0; i < n; i++) {
         
-        return [NSSet setWithObjects:classes count:m];
+        if (!hot_classIsOfKind(classes[i], [NSObject class]))
+            continue;
+        
+        [classNames addObject:classes[i]];
     }
-    @finally {
-        free(classes);
+    
+    free(classes);
+    return classNames;
+}
++ (NSSet*)allMethodsForClass:(Class)cl {
+    
+    unsigned n = 0;
+    Method* methods = objc_getClassList(classes, n);
+    
+    NSMutableSet* methodNames = [NSMutableSet set];
+    for (unsigned i = 0; i < n; i++) {
+        SEL sel = method_getName(methods[i]);
+        if (!sel)
+            continue;
+        
+        [methodNames addObject:NSStringFromSelector(sel)];
     }
+    
+    free(methods);
+    return methodNames;        
 }
 
 - (void)start {
@@ -76,7 +107,10 @@ typedef (int)(*hot_main_t)(int, char**, char**, char**);
 - (void)swizzle {
     
     for (NSString* classname in [[self class] allClasses]) {
-        
+        Class cl = NSClassFromString(classname);
+        for (NSString* methodname in [[self class] allMethodsForClass:cl]) {
+            
+        }
     }
 }
 - (void*)symbolNamed:(NSString*)name errorString:(NSString**)errstr {
