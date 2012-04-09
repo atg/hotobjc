@@ -54,7 +54,7 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
     size_t m = objc_getClassList(classes, n);
     
     NSMutableSet* classNames = [NSMutableSet set];
-    for (unsigned i = 0; i < n; i++) {
+    for (unsigned i = 0; i < m; i++) {
         
         if (!hot_classIsOfKind(classes[i], [NSObject class]))
             continue;
