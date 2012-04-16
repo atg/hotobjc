@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75EFA43A153CAE4A009E5AEB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EFA439153CAE4A009E5AEB /* Cocoa.framework */; };
+		75EFA444153CAE4A009E5AEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75EFA442153CAE4A009E5AEB /* InfoPlist.strings */; };
+		75EFA446153CAE4A009E5AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EFA445153CAE4A009E5AEB /* main.m */; };
+		75EFA44A153CAE4A009E5AEB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 75EFA448153CAE4A009E5AEB /* Credits.rtf */; };
+		75EFA44D153CAE4A009E5AEB /* GDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EFA44C153CAE4A009E5AEB /* GDAppDelegate.m */; };
+		75EFA450153CAE4A009E5AEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EFA44E153CAE4A009E5AEB /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		75EFA435153CAE4A009E5AEB /* Green Dot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Green Dot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75EFA439153CAE4A009E5AEB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		75EFA43C153CAE4A009E5AEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		75EFA43D153CAE4A009E5AEB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		75EFA43E153CAE4A009E5AEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		75EFA441153CAE4A009E5AEB /* Green Dot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Green Dot-Info.plist"; sourceTree = "<group>"; };
+		75EFA443153CAE4A009E5AEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75EFA445153CAE4A009E5AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75EFA447153CAE4A009E5AEB /* Green Dot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Green Dot-Prefix.pch"; sourceTree = "<group>"; };
+		75EFA449153CAE4A009E5AEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		75EFA44B153CAE4A009E5AEB /* GDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAppDelegate.h; sourceTree = "<group>"; };
+		75EFA44C153CAE4A009E5AEB /* GDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAppDelegate.m; sourceTree = "<group>"; };
+		75EFA44F153CAE4A009E5AEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75EFA432153CAE4A009E5AEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75EFA43A153CAE4A009E5AEB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75EFA42A153CAE48009E5AEB = {
+			isa = PBXGroup;
+			children = (
+				75EFA43F153CAE4A009E5AEB /* Green Dot */,
+				75EFA438153CAE4A009E5AEB /* Frameworks */,
+				75EFA436153CAE4A009E5AEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75EFA436153CAE4A009E5AEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75EFA435153CAE4A009E5AEB /* Green Dot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75EFA438153CAE4A009E5AEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75EFA439153CAE4A009E5AEB /* Cocoa.framework */,
+				75EFA43B153CAE4A009E5AEB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75EFA43B153CAE4A009E5AEB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75EFA43C153CAE4A009E5AEB /* AppKit.framework */,
+				75EFA43D153CAE4A009E5AEB /* CoreData.framework */,
+				75EFA43E153CAE4A009E5AEB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		75EFA43F153CAE4A009E5AEB /* Green Dot */ = {
+			isa = PBXGroup;
+			children = (
+				75EFA44B153CAE4A009E5AEB /* GDAppDelegate.h */,
+				75EFA44C153CAE4A009E5AEB /* GDAppDelegate.m */,
+				75EFA44E153CAE4A009E5AEB /* MainMenu.xib */,
+				75EFA440153CAE4A009E5AEB /* Supporting Files */,
+			);
+			path = "Green Dot";
+			sourceTree = "<group>";
+		};
+		75EFA440153CAE4A009E5AEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75EFA441153CAE4A009E5AEB /* Green Dot-Info.plist */,
+				75EFA442153CAE4A009E5AEB /* InfoPlist.strings */,
+				75EFA445153CAE4A009E5AEB /* main.m */,
+				75EFA447153CAE4A009E5AEB /* Green Dot-Prefix.pch */,
+				75EFA448153CAE4A009E5AEB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75EFA434153CAE4A009E5AEB /* Green Dot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75EFA453153CAE4A009E5AEB /* Build configuration list for PBXNativeTarget "Green Dot" */;
+			buildPhases = (
+				75EFA431153CAE4A009E5AEB /* Sources */,
+				75EFA432153CAE4A009E5AEB /* Frameworks */,
+				75EFA433153CAE4A009E5AEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Green Dot";
+			productName = "Green Dot";
+			productReference = 75EFA435153CAE4A009E5AEB /* Green Dot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75EFA42C153CAE48009E5AEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 75EFA42F153CAE48009E5AEB /* Build configuration list for PBXProject "Green Dot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 75EFA42A153CAE48009E5AEB;
+			productRefGroup = 75EFA436153CAE4A009E5AEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75EFA434153CAE4A009E5AEB /* Green Dot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75EFA433153CAE4A009E5AEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75EFA444153CAE4A009E5AEB /* InfoPlist.strings in Resources */,
+				75EFA44A153CAE4A009E5AEB /* Credits.rtf in Resources */,
+				75EFA450153CAE4A009E5AEB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75EFA431153CAE4A009E5AEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75EFA446153CAE4A009E5AEB /* main.m in Sources */,
+				75EFA44D153CAE4A009E5AEB /* GDAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		75EFA442153CAE4A009E5AEB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75EFA443153CAE4A009E5AEB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		75EFA448153CAE4A009E5AEB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75EFA449153CAE4A009E5AEB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		75EFA44E153CAE4A009E5AEB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75EFA44F153CAE4A009E5AEB /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75EFA451153CAE4A009E5AEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		75EFA452153CAE4A009E5AEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		75EFA454153CAE4A009E5AEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Green Dot/Green Dot-Prefix.pch";
+				INFOPLIST_FILE = "Green Dot/Green Dot-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		75EFA455153CAE4A009E5AEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Green Dot/Green Dot-Prefix.pch";
+				INFOPLIST_FILE = "Green Dot/Green Dot-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75EFA42F153CAE48009E5AEB /* Build configuration list for PBXProject "Green Dot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75EFA451153CAE4A009E5AEB /* Debug */,
+				75EFA452153CAE4A009E5AEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75EFA453153CAE4A009E5AEB /* Build configuration list for PBXNativeTarget "Green Dot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75EFA454153CAE4A009E5AEB /* Debug */,
+				75EFA455153CAE4A009E5AEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75EFA42C153CAE48009E5AEB /* Project object */;
+}

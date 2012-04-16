@@ -11,6 +11,27 @@
 
 typedef (int)(*hot_main_t)(int, char**, char**, char**);
 
+
+#include <sys/stat.h>
+static inline NSTimeInterval HLTimespecToTimeInterval(struct timespec ts) {
+    return (ts.tv_sec - NSTimeIntervalSince1970) + (ts.tv_nsec / 1000000000);
+}
+static NSDate* HLModificationDate(NSString* path) {
+    
+    struct stat s;
+    int statworked = [self fileSystemRepresentation] ? lstat([self fileSystemRepresentation], &s) : -1;
+    if (statworked == 0) {
+        
+        double fileTimestampDoubleStat = CHTimespecToTimeInterval(s.st_mtimespec);
+        return [NSDate dateWithTimeIntervalSinceReferenceDate:fileTimestampDoubleStat];
+    }
+    return nil;
+}
+
+static void hot_raise(NSString* err) {
+    [NSException raise:@"hotobjc exception" format:err];
+}
+
 @interface HotLoader : NSObject
 
 // dlopen handle
@@ -65,7 +86,7 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
     free(classes);
     return classNames;
 }
-+ (void)enumerateMethodsForClass:(Class)cl with:(void(^)(Method meth))f {
++ (void)enumerateMethodsForClass:(Class)cl with:(void(^)(Method))f {
     unsigned n = 0;
     Method* methods = class_copyMethodList(classes, &n);
     
@@ -102,8 +123,12 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
     NSTimeInterval lastChangeDate = [NSDate timeIntervalSinceReferenceDate];
     while (1) {
         
-        NSTimeInterval newChangeDate = ...;
-        
+        NSTimeInterval newChangeDate = [HLModificationDate([self targetPath]) timeIntervalSinceReferenceDate];
+        if (fabs(newChangeDate - lastChangeDate) > 0.001) {
+            // ...
+            
+            [self reload:NO];
+        }
         
         sleep(1);
     }
@@ -123,7 +148,9 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
 }
 - (void)swizzle {
     
-    for (NSString* classname in [[self class] allClasses]) {
+    NSSet* classes = [[[[self class] allClasses] mutableCopy] minusSet:baseClasses];
+    
+    for (NSString* classname in classes) {
         Class cl = NSClassFromString(classname);
         [self enumerateMethodsForClass:cl with:^(Method meth) {
             SEL sel = method_getName(meth);
@@ -143,7 +170,7 @@ static BOOL hot_classIsOfKind(Class cl, Class other) {
         return sym;
     
     if (errstr) {
-        char c_errstr = dlerror();
+        char* c_errstr = dlerror();
         *errstr = c_errstr ? [NSString stringWithUTF8String:dlerror()] : [NSString stringWithFormat:@"Unknown error resolving symbol '%@'", name];
     }
     return nil;
