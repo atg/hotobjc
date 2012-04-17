@@ -16,6 +16,4 @@
 
 @interface GDDotView : NSView
 
-- (void)redraw;
-
 @end

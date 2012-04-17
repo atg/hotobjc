@@ -12,3 +12,7 @@ int main(int argc, char *argv[])
 {
     return NSApplicationMain(argc, (const char **)argv);
 }
+int m2();
+int m2() {
+    return 0;
+}

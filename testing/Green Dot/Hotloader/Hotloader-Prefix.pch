@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'Hotloader' target in the 'Hotloader' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#define HOTLOADER_TARGET @"Green Dot"
+#define HOTLOADER_APP_PATH @"Green Dot.app/Contents/MacOS/Green Dot"
+
+// #pragma visibility push(externally_visible)

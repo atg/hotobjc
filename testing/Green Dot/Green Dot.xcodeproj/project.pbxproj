@@ -13,7 +13,23 @@
 		75EFA44A153CAE4A009E5AEB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 75EFA448153CAE4A009E5AEB /* Credits.rtf */; };
 		75EFA44D153CAE4A009E5AEB /* GDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EFA44C153CAE4A009E5AEB /* GDAppDelegate.m */; };
 		75EFA450153CAE4A009E5AEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EFA44E153CAE4A009E5AEB /* MainMenu.xib */; };
+		75EFA474153CB934009E5AEB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75EFA439153CAE4A009E5AEB /* Cocoa.framework */; };
+		75EFA47A153CB934009E5AEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75EFA478153CB934009E5AEB /* InfoPlist.strings */; };
+		75EFA480153CB934009E5AEB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 75EFA47E153CB934009E5AEB /* Credits.rtf */; };
+		75EFA483153CB934009E5AEB /* GDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EFA482153CB934009E5AEB /* GDAppDelegate.m */; };
+		75EFA486153CB934009E5AEB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75EFA484153CB934009E5AEB /* MainMenu.xib */; };
+		75EFA48C153CB951009E5AEB /* hotobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EFA48B153CB951009E5AEB /* hotobjc.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75EFA48D153CB9C3009E5AEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75EFA42C153CAE48009E5AEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75EFA434153CAE4A009E5AEB;
+			remoteInfo = "Green Dot";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		75EFA435153CAE4A009E5AEB /* Green Dot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Green Dot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +45,15 @@
 		75EFA44B153CAE4A009E5AEB /* GDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAppDelegate.h; sourceTree = "<group>"; };
 		75EFA44C153CAE4A009E5AEB /* GDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAppDelegate.m; sourceTree = "<group>"; };
 		75EFA44F153CAE4A009E5AEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		75EFA472153CB933009E5AEB /* Hotloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75EFA477153CB934009E5AEB /* Hotloader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hotloader-Info.plist"; sourceTree = "<group>"; };
+		75EFA479153CB934009E5AEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75EFA47D153CB934009E5AEB /* Hotloader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hotloader-Prefix.pch"; sourceTree = "<group>"; };
+		75EFA47F153CB934009E5AEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		75EFA481153CB934009E5AEB /* GDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDAppDelegate.h; sourceTree = "<group>"; };
+		75EFA482153CB934009E5AEB /* GDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDAppDelegate.m; sourceTree = "<group>"; };
+		75EFA485153CB934009E5AEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		75EFA48B153CB951009E5AEB /* hotobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = hotobjc.m; path = ../../../source/hotobjc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +65,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75EFA46F153CB933009E5AEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75EFA474153CB934009E5AEB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -47,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				75EFA43F153CAE4A009E5AEB /* Green Dot */,
+				75EFA475153CB934009E5AEB /* Hotloader */,
 				75EFA438153CAE4A009E5AEB /* Frameworks */,
 				75EFA436153CAE4A009E5AEB /* Products */,
 			);
@@ -56,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				75EFA435153CAE4A009E5AEB /* Green Dot.app */,
+				75EFA472153CB933009E5AEB /* Hotloader.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +137,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		75EFA475153CB934009E5AEB /* Hotloader */ = {
+			isa = PBXGroup;
+			children = (
+				75EFA48B153CB951009E5AEB /* hotobjc.m */,
+				75EFA481153CB934009E5AEB /* GDAppDelegate.h */,
+				75EFA482153CB934009E5AEB /* GDAppDelegate.m */,
+				75EFA484153CB934009E5AEB /* MainMenu.xib */,
+				75EFA476153CB934009E5AEB /* Supporting Files */,
+			);
+			path = Hotloader;
+			sourceTree = "<group>";
+		};
+		75EFA476153CB934009E5AEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75EFA477153CB934009E5AEB /* Hotloader-Info.plist */,
+				75EFA478153CB934009E5AEB /* InfoPlist.strings */,
+				75EFA47D153CB934009E5AEB /* Hotloader-Prefix.pch */,
+				75EFA47E153CB934009E5AEB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +178,24 @@
 			name = "Green Dot";
 			productName = "Green Dot";
 			productReference = 75EFA435153CAE4A009E5AEB /* Green Dot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75EFA471153CB933009E5AEB /* Hotloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75EFA487153CB934009E5AEB /* Build configuration list for PBXNativeTarget "Hotloader" */;
+			buildPhases = (
+				75EFA46E153CB933009E5AEB /* Sources */,
+				75EFA46F153CB933009E5AEB /* Frameworks */,
+				75EFA470153CB933009E5AEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75EFA48E153CB9C3009E5AEB /* PBXTargetDependency */,
+			);
+			name = Hotloader;
+			productName = Hotloader;
+			productReference = 75EFA472153CB933009E5AEB /* Hotloader.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,6 +219,7 @@
 			projectRoot = "";
 			targets = (
 				75EFA434153CAE4A009E5AEB /* Green Dot */,
+				75EFA471153CB933009E5AEB /* Hotloader */,
 			);
 		};
 /* End PBXProject section */
@@ -158,6 +235,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75EFA470153CB933009E5AEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75EFA47A153CB934009E5AEB /* InfoPlist.strings in Resources */,
+				75EFA480153CB934009E5AEB /* Credits.rtf in Resources */,
+				75EFA486153CB934009E5AEB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -170,7 +257,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75EFA46E153CB933009E5AEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75EFA483153CB934009E5AEB /* GDAppDelegate.m in Sources */,
+				75EFA48C153CB951009E5AEB /* hotobjc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75EFA48E153CB9C3009E5AEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75EFA434153CAE4A009E5AEB /* Green Dot */;
+			targetProxy = 75EFA48D153CB9C3009E5AEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		75EFA442153CAE4A009E5AEB /* InfoPlist.strings */ = {
@@ -193,6 +297,30 @@
 			isa = PBXVariantGroup;
 			children = (
 				75EFA44F153CAE4A009E5AEB /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		75EFA478153CB934009E5AEB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75EFA479153CB934009E5AEB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		75EFA47E153CB934009E5AEB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75EFA47F153CB934009E5AEB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		75EFA484153CB934009E5AEB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75EFA485153CB934009E5AEB /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -248,6 +376,7 @@
 		75EFA454153CAE4A009E5AEB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EXPORTED_SYMBOLS_FILE = wildcard.txt;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Green Dot/Green Dot-Prefix.pch";
 				INFOPLIST_FILE = "Green Dot/Green Dot-Info.plist";
@@ -259,9 +388,82 @@
 		75EFA455153CAE4A009E5AEB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EXPORTED_SYMBOLS_FILE = wildcard.txt;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Green Dot/Green Dot-Prefix.pch";
 				INFOPLIST_FILE = "Green Dot/Green Dot-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		75EFA456153CB3A3009E5AEB /* Hotloading */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Hotloading;
+		};
+		75EFA457153CB3A3009E5AEB /* Hotloading */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXPORTED_SYMBOLS_FILE = wildcard.txt;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Green Dot/Green Dot-Prefix.pch";
+				INFOPLIST_FILE = "Green Dot/Green Dot-Info.plist";
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Hotloading;
+		};
+		75EFA488153CB934009E5AEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hotloader/Hotloader-Prefix.pch";
+				INFOPLIST_FILE = "Hotloader/Hotloader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		75EFA489153CB934009E5AEB /* Hotloading */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hotloader/Hotloader-Prefix.pch";
+				INFOPLIST_FILE = "Hotloader/Hotloader-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Hotloading;
+		};
+		75EFA48A153CB934009E5AEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hotloader/Hotloader-Prefix.pch";
+				INFOPLIST_FILE = "Hotloader/Hotloader-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,6 +476,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75EFA451153CAE4A009E5AEB /* Debug */,
+				75EFA456153CB3A3009E5AEB /* Hotloading */,
 				75EFA452153CAE4A009E5AEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -283,7 +486,17 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75EFA454153CAE4A009E5AEB /* Debug */,
+				75EFA457153CB3A3009E5AEB /* Hotloading */,
 				75EFA455153CAE4A009E5AEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		75EFA487153CB934009E5AEB /* Build configuration list for PBXNativeTarget "Hotloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75EFA488153CB934009E5AEB /* Debug */,
+				75EFA489153CB934009E5AEB /* Hotloading */,
+				75EFA48A153CB934009E5AEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
